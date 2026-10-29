@@ -1,0 +1,65 @@
+4-Way Traffic Light Controller Using Verilog HDL
+
+Overview
+
+This project implements a four-way traffic light controller using Verilog Hardware Description Language (HDL). It controls traffic in two directions: North–South (NS) and East–West (EW).
+
+The controller uses a six-state finite-state machine (FSM) and was simulated using VeriBit Playground.
+
+Features
+
+- Six-state finite-state machine.
+- Independent North–South and East–West traffic signals.
+- All-red transition states between traffic directions.
+- Clock-driven state transitions.
+- Asynchronous reset.
+- Simulation testbench and waveform inspection.
+
+State Sequence
+
+1. NS Green — EW Red
+2. NS Yellow — EW Red
+3. All Red
+4. NS Red — EW Green
+5. NS Red — EW Yellow
+6. All Red
+7. Repeat
+
+Project Files
+
+File| Description
+"traffic_4way.v"| Main Verilog design
+"traffic_4way_tb.v"| Simulation testbench
+
+Tools Used
+
+- Verilog HDL
+- VeriBit Playground
+- GitHub
+
+Simulation
+
+The design was simulated in VeriBit Playground. The console output was used to inspect the state sequence, and the waveform viewer was used to observe signal transitions.
+
+Learning Outcomes
+
+- Understanding finite-state machines.
+- Writing sequential and combinational Verilog logic.
+- Using clock and reset signals.
+- Reading simulation output and timing waveforms.
+- Organizing and documenting an HDL project.
+
+Limitations
+
+This is an educational simulation. Each state lasts one clock cycle, and the design has not been validated for real-world traffic control. It does not include timed intervals, pedestrian signals, or hardware testing.
+
+Future Improvements
+
+- Add configurable green and yellow durations.
+- Add a clock divider or timer counter.
+- Develop a more comprehensive testbench.
+- Explore FPGA implementation.
+
+Author
+
+An Electrical and Electronics Engineering student learning digital design and VLSI.
